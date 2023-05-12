@@ -1,7 +1,5 @@
 from django.db import models
 
-# from django.contrib.gis.db import models
-
 from django.utils import timezone
 from api_data_pipeline.apps.weather.constants import WEATHER_CONDITION_CHOICES
 
@@ -30,6 +28,8 @@ class Weather(models.Model):
     )
     weather_description = models.CharField(max_length=100, null=True)
     temperature = models.FloatField()
+    pressure = models.FloatField(null=True, blank=True)
+    humidity = models.FloatField(null=True, blank=True)
     wind_speed = models.FloatField(null=True, blank=True)
 
     class Meta:
