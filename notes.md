@@ -20,7 +20,11 @@ source /Users/arash/.local/share/virtualenvs/Data-Integration-Case-Study-BIZkF3i
 Stack
 
 - [django REST framework](https://www.django-rest-framework.org/)
+- poetry
 
 imperovements
 
 - secure keys to be added in the enviorment file
+- would use better paid apis
+- date vs datetime
+- not including all the data from the APIs
