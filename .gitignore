@@ -81,5 +81,3 @@ google-credentials.json
 #mypy
 .mypy_cache
 
-#databse
-db.sqlite3
