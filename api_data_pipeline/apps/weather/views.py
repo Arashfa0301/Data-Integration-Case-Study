@@ -94,6 +94,11 @@ class WeatherViewSet(viewsets.ModelViewSet):
 
     @action(detail=False, methods=["GET"])
     def get_all_loaded_locations(self, request) -> Response:
+        for i in range(100):
+            latLonResponse = requests.get(
+                OpenWeather_URLS.get_coordinates_by_city(city="London")
+            ).json()[0]
+
         return Response(
             LocationSerializer(
                 Location.objects.all(),

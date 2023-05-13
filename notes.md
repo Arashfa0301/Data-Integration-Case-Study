@@ -28,3 +28,7 @@ imperovements
 - would use better paid apis
 - date vs datetime
 - not including all the data from the APIs
+
+Things done:
+
+- the rate limits are handled for the new api but the weather api for some reason doesn't appear to have a limit
