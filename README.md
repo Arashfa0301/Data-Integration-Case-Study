@@ -15,15 +15,15 @@ To run this pipeline, you will need the following:
 
 To run the pipeline, do the following:
 
-1. Clone the repository: `git clone https://github.com/your_username/your_project.git`
-2. Set your API keys for OpenWeatherMap and NewsAPI in the `constants` file.
+1. Clone the repository: `git@github.com:Arashfa0301/Data-Integration-Case-Study.git`
+2. Set your API keys for OpenWeatherMap and NewsAPI in the `api_data_pipeline/apps/constants.py` file.
 3. Run via docker
 
 ```bash
-$ docker compose up -d
+$ docker compose up --build
 ```
 
-## Sample scripts
+## Sample APIs
 
 ### Articles of the last 30 days
 
@@ -116,4 +116,38 @@ _Result:_
 		"wind_speed": 1.68
 	}
 ]
+```
+
+### Other APIs
+
+```shell
+http://localhost:8000/weather/load_current_weather_by_city/?city={city}
+```
+
+```shell
+http://localhost:8000/weather/get_all_weathers/?city={city}
+```
+
+```shell
+http://localhost:8000/weather/clear_weather_database
+```
+
+```shell
+http://localhost:8000/weather/get_all_loaded_locations
+```
+
+```shell
+http://localhost:8000/news/get_top_headlines_today_by_country?country={country}
+```
+
+```shell
+http://localhost:8000/news/get_articles_by_date_of_the_last_thirdy_days?source={source}&date={YYYY-MM-DD}
+```
+
+```shell
+http://localhost:8000/news/get_sources?category={category}&language={language}&country={country}
+```
+
+```shell
+http://localhost:8000/news/clear_db
 ```
