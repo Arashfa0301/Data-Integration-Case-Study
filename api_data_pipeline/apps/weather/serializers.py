@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from api_data_pipeline.apps.weather.models import Weather
+from api_data_pipeline.apps.weather.models import Weather, Location
 
 
 class WeatherSerializer(serializers.ModelSerializer):
@@ -15,4 +15,14 @@ class WeatherSerializer(serializers.ModelSerializer):
             "pressure",
             "humidity",
             "wind_speed",
+        ]
+
+
+class LocationSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Location
+        fields = [
+            "city",
+            "latitude",
+            "longitude",
         ]

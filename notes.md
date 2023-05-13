@@ -9,7 +9,7 @@
 
 TODO's:
 
-- dockerize the project
+- model mix weather and location with articles
 
 API keys:
 
